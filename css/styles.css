@@ -1,0 +1,389 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,700);
+body {
+  font-family:"Microsoft JhengHei","微軟正黑體";
+  font-weight: 600;
+}
+
+body ul li {
+  list-style-type: none;
+}
+
+/* Modified card styles */
+.card {
+  -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+  /*大頭照 背景圖*/
+  /*skill title圖*/
+  /*人員大頭照*/
+}
+
+.card .card-header p {
+  margin: 0;
+}
+
+.card .card-background {
+  background: url("../images/skills.jpg");
+  height: 8em;
+  background-position: center center;
+  background-size: 180%;
+}
+
+.card .card-background-skill {
+  background: url("../images/skills.jpg");
+  background-size: 180%;
+  height: 8em;
+  background-position: center center;
+}
+
+.card .card-block p {
+  text-align: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.card .avatar {
+  max-width: 10em;
+  max-height: 10em;
+  margin-top: -4em;
+  margin-bottom: 1em;
+  border: 4px solid white;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: radial-gradient(#e3e3e3, #329a7c, #109381);
+}
+
+.card .list-group-item {
+  text-align: left;
+  border: none;
+}
+
+.card .btn {
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+
+
+
+
+/*icon*/
+i.material-icons {
+  font-size: 1.5rem;
+  color: white;
+  position: relative;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.3s ease;
+}
+
+i.material-icons:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border: solid 2px;
+  transform: scale(0.8);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+i.material-icons:hover:after {
+  transform: scale(1.2);
+  box-shadow: 10px 0 20px rgba(0, 0, 0, 0.19), 6px 0 6px rgba(0, 0, 0, 0.23);
+}
+
+i.material-icons:nth-of-type(1) {
+  background-color: rgb(107, 156, 209);
+}
+
+i.material-icons:nth-of-type(1):hover {
+  color: rgb(107, 156, 209);
+}
+
+i.material-icons:nth-of-type(1):after {
+  border-color: rgb(107, 156, 209);
+}
+
+i.material-icons:nth-of-type(2) {
+  background-color: rgb(107, 156, 209);
+}
+
+i.material-icons:nth-of-type(2):hover {
+  color: rgb(107, 156, 209);
+}
+
+i.material-icons:nth-of-type(2):after {
+  border-color: rgb(107, 156, 209);
+}
+
+i.material-icons:hover {
+  background-color: transparent;
+  transform: rotate(30deg);
+  cursor: pointer;
+  box-shadow: none;
+}
+
+/*=======================timeline=========================*/
+/* Variables */
+/* Fonts */
+/* Layout */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Styling */
+.timeline {
+  margin: 4em auto;
+  position: relative;
+  max-width: 46em;
+}
+
+.timeline:before {
+  background-color: lightgray;
+  content: '';
+  margin-left: -30px;
+  position: absolute;
+  top: 0;
+  left: 2em;
+  width: 2px;
+  height: 100%;
+}
+
+/*時間軸主區塊 包含軸線*/
+.timeline-event {
+  position: relative;
+  margin-left: -110px;
+  margin-top: -40px;
+}
+
+.timeline-event-thumbnail{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.timeline-event:hover .timeline-event-icon {
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  background-color: rgb(107, 156, 209);
+}
+
+.timeline-event:hover .timeline-event-thumbnail {
+  color: rgb(107, 156, 209);
+}
+
+/*時間軸 整個事件區塊*/
+.timeline-event-copy {
+  padding: 2em;
+  position: relative;
+  top: -1.875em;
+  left: 4em;
+  width: 90%;
+}
+
+.timeline-event-copy h3 {
+  font-size: 1.75em;
+}
+
+.timeline-event-copy h4 {
+  font-size: 1.2em;
+  margin-bottom: 1.2em;
+}
+
+.timeline-event-copy strong {
+  font-weight: 700;
+}
+
+.timeline-event-copy p:not(.timeline-event-thumbnail) {
+  padding-bottom: 1.2em;
+}
+
+/*時間軸 菱形*/
+.timeline-event-icon {
+  -moz-transition: -moz-transform 0.2s ease-in;
+  -o-transition: -o-transform 0.2s ease-in;
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: black;
+  outline: 10px solid white;
+  display: block;
+  margin: 0.5em 0.5em 0.5em -0.5em;
+  position: absolute;
+  top: 0;
+  left: 4.5em;
+  width: 1em;
+  height: 1em;
+}
+
+.timeline-year {
+  width: 100%;
+  padding: 15px;
+  margin-left: 10px;
+  /*時間軸 job 菱形*/
+}
+
+.timeline-year .timeline-job-icon {
+  -moz-transition: -moz-transform 0.2s ease-in;
+  -o-transition: -o-transform 0.2s ease-in;
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: black;
+  outline: 10px solid white;
+  display: inline-block;
+  margin: 0.5em 1em 0.5em -0.5em;
+  width: 0.5em;
+  height: 0.5em;
+  position: relative;
+  top: 0.3em;
+}
+
+.timeline-year .timeline-main-job {
+  cursor: pointer;
+}
+
+
+.timeline-year .timeline-main-job:hover {
+  color: rgb(107, 156, 209);
+}
+
+.timeline-main-job-null:hover {
+    color: rgb(107, 156, 209);
+}
+
+
+.timeline-badge-job,.timeline-badge-job-main {
+  margin-left: 5px;
+  background-color: rgb(107, 156, 209);
+}
+.timeline-badge-job-main{
+    background-color: rgb(197, 78, 108);
+}
+
+.timeline-year li {
+  margin-bottom: 10px;
+}
+
+.job-item{
+  border:none;
+  box-shadow: none;
+  margin-left: 30px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.job-item i+i{
+  margin-top: 15px;
+}
+
+/*skill*/
+.graph-cont {
+  width: calc(100% - 40px);
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.bar {
+  height: 30px;
+  max-width: 800px;
+  margin: 0 auto 10px auto;
+  line-height: 30px;
+  font-size: 16px;
+  color: white;
+  padding: 0 0 0 10px;
+  position: relative;
+  z-index: 3;
+}
+
+.bar::before {
+  content: '';
+  width: 100%;
+  position: absolute;
+  left: 0;
+  height: 30px;
+  top: 0;
+  z-index: -2;
+  background: #ecf0f1;
+}
+
+.bar::after {
+  content: '';
+  background: rgb(107, 156, 209);
+  height: 30px;
+  transition: 0.7s;
+  display: block;
+  width: 100%;
+  -webkit-animation: bar-before 1 1.8s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/*HTML*/
+.bar1::after {
+  max-width: 60%;
+}
+/*CSS*/
+.bar2::after {
+  max-width: 60%;
+}
+/*JAVASCRIPT*/
+.bar3::after {
+  max-width: 47%;
+}
+/*ASP.NET WebForm*/
+.bar4::after {
+  max-width: 40%;
+}
+/*ASP.NET WinForm*/
+.bar5::after {
+  max-width: 40%;
+}
+/*java*/
+.bar6::after {
+  max-width: 40%;
+}
+/*php*/
+.bar7::after {
+  max-width: 44%;
+}
+/*wordpress*/
+.bar8::after {
+  max-width: 39%;
+}
+/*bootstrap*/
+.bar9::after {
+  max-width: 40%;
+}
+/*jquery*/
+.bar10::after {
+  max-width: 45%;
+}
+
+
+
+@-webkit-keyframes bar-before {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+  }
+}
