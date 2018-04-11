@@ -24,9 +24,9 @@ body ul li {
 }
 
 .card .card-background {
-  background: url("../images/skills.jpg");
+  background: url("../images/title.jpg");
   height: 8em;
-  background-position: center center;
+  background-position: right right;
   background-size: 180%;
 }
 
@@ -379,6 +379,14 @@ i.material-icons:hover {
 
 
 
+.alert
+{
+  font-weight: 800;
+  height: 100px;
+  text-align: center;
+  padding-top: 30px;
+}
+
 @-webkit-keyframes bar-before {
   0% {
     width: 0px;
@@ -386,4 +394,37 @@ i.material-icons:hover {
   100% {
     width: 100%;
   }
+}
+
+
+@media(max-width:552px){
+    
+  .bar4 {
+   font-size: 15px;
+  }
+  /*ASP.NET WinForm*/
+  .bar5 {
+    font-size: 15px;
+  }
+
+}
+
+@media(min-width:768px) and (max-width:1200px){
+    
+  .bar4 {
+   font-size: 8px;
+  }
+  /*ASP.NET WinForm*/
+  .bar5 {
+    font-size: 8px;
+  }
+   /*wordpress*/
+  .bar8 {
+    font-size: 12px;
+   }
+   /*bootstrap*/
+   .bar9 {
+     font-size: 12px;
+   }
+
 }
